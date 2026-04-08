@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { UserRound, CheckCircle2, MessageSquare, Clock, ArrowRight } from "lucide-react";
+import { UserRound, CheckCircle2, MessageSquare, Clock, ArrowRight, User } from "lucide-react";
 import { DOCTORS } from "../constants";
 
 export const DoctorProfile = () => {
@@ -17,13 +17,10 @@ export const DoctorProfile = () => {
         </a>
         
         <div className="bg-white rounded-[3rem] overflow-hidden shadow-2xl border border-slate-100 flex flex-col md:flex-row">
-          <div className="md:w-2/5 h-[500px] md:h-auto">
-            <img 
-              src={doctor.image} 
-              alt={doctor.name} 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
+          <div className="md:w-2/5 h-[400px] md:h-auto bg-slate-50 flex items-center justify-center border-r border-slate-100">
+            <div className="w-48 h-48 bg-medical-light rounded-full flex items-center justify-center text-medical-blue">
+              <User className="w-32 h-32" />
+            </div>
           </div>
           <div className="md:w-3/5 p-12 lg:p-16">
             <div className="inline-block bg-medical-light text-medical-blue px-4 py-1 rounded-full text-sm font-bold mb-4">

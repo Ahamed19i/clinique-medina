@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { User } from "lucide-react";
 import { DOCTORS } from "../constants";
 
 export const Team = () => {
@@ -14,13 +15,10 @@ export const Team = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {DOCTORS.map((doc) => (
             <div key={doc.id} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
-              <div className="h-80 overflow-hidden relative">
-                <img 
-                  src={doc.image} 
-                  alt={doc.name} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
+              <div className="h-80 overflow-hidden relative bg-slate-100 flex items-center justify-center">
+                <div className="w-40 h-40 bg-medical-light rounded-full flex items-center justify-center text-medical-blue group-hover:scale-110 transition-transform duration-500">
+                  <User className="w-24 h-24" />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-medical-dark text-xl mb-1">{doc.name}</h3>
